@@ -13,7 +13,7 @@ def intAssist(client): #Creates the assistant thread. could be improved by inste
     instructions="You are to answer the questions asked to the best of your ability. Answer as if you are speaking directly to a person. Keep your answers under three paragraphs. You act friendly to whoever asks a question.", #Here we can adjust the personality of the AI
     tools=[{"type": "code_interpreter"}], #If we want to add math/code functionality
     model="gpt-4-1106-preview" #to change the model if we desire
-)
+) #In the future, it might be best to instead import an already existing assistant. As of now, it creates a new one every time. 
     thread = client.beta.threads.create()
     return thread,assistant
 
